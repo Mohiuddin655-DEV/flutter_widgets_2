@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/responsive_naming_text_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Widgets',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.blue,
       ),
       home: const HomePage(),
     );
@@ -26,15 +27,25 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Text(
-            'Home',
-            style: TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-              fontSize: 40,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                ResponsiveNamingTextView(name: 'Name1', value: 'Value1'),
+                ResponsiveNamingTextView(name: 'Name2', value: 'Value2'),
+                ResponsiveNamingTextView(name: 'Name3', value: 'Value3'),
+                ResponsiveNamingTextView(name: 'Name4', value: 'Value4'),
+                ResponsiveNamingTextView(name: 'Name5', value: 'Value5'),
+              ],
             ),
           ),
         ),
