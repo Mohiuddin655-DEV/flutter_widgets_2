@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/responsive_naming_text_view.dart';
 
@@ -44,6 +45,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: const [
+              AutoSizeText('Hi'),
               ResponsiveNamingTextView(name: 'Name1', value: 'Value1'),
               ResponsiveNamingTextView(name: 'Name2', value: 'Value2'),
               ResponsiveNamingTextView(name: 'Name3', value: 'Value3'),
